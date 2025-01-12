@@ -44,44 +44,51 @@ public class MySecurityConfig {
 		return new ProviderManager(provider);
 		}
 	
+//	@Bean
+//	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+//		http.authorizeHttpRequests()
+//			.requestMatchers("/",
+//					"/login",
+//					"/registration",
+//					"/index",
+//					"/registration",
+//					"/logoutSuccessUrl",
+//					"/logout",
+//					"/registration**",
+//	                "/index2",
+//	                "/edit_product",
+//	                "/new_product",
+//	                "/edit/{id}",
+//	                "/delete/{id}",
+//	                "/save",
+//	                "/search",
+//	                "/new",
+//	                "/joblist",
+//	                "https://nikhilbharat-v2-production.up.railway.app/")
+//			.permitAll()
+//			.requestMatchers(HttpMethod.GET,"/","https://nikhilbharat-v2-production.up.railway.app/")
+//			.hasAnyRole("user","admin")
+//			.requestMatchers(HttpMethod.POST,"/login","/registration","/index","/registration","/new_product","/save","https://nikhilbharat-v2-production.up.railway.app/")
+//			.hasAnyRole("user","admin")	
+//			.and().logout().logoutSuccessUrl("/")
+//			
+//			.and().csrf().disable();
+//		
+//	//	http.addFilterBefore(new MySecurityFilter(), BasicAuthenticationFilter.class);
+//		
+//		//http://localhost:8080/new_product
+//		
+//		http.securityContext(securityContext->securityContext.requireExplicitSave(true));
+//		
+//		return http.build();
+//		}
+//	
 	@Bean
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests()
-		
-			.requestMatchers("/",
-					"/login",
-					"/registration",
-					"/index",
-					"/registration",
-					"/logoutSuccessUrl",
-					"/logout",
-					"/registration**",
-	                "/index2",
-	                "/edit_product",
-	                "/new_product",
-	                "/edit/{id}",
-	                "/delete/{id}",
-	                "/save",
-	                "/search",
-	                "/new",
-	                "/joblist",
-	                "https://nikhilbharat-v2-production.up.railway.app/")
-			.permitAll()
-			.requestMatchers(HttpMethod.GET,"/","https://nikhilbharat-v2-production.up.railway.app/")
-			.hasAnyRole("user","admin")
-			.requestMatchers(HttpMethod.POST,"/login","/registration","/index","/registration","/new_product","/save","https://nikhilbharat-v2-production.up.railway.app/")
-			.hasAnyRole("user","admin")	
-			.and().logout().logoutSuccessUrl("/")
-			
-			.and().csrf().disable();
-		
-	//	http.addFilterBefore(new MySecurityFilter(), BasicAuthenticationFilter.class);
-		
-		//http://localhost:8080/new_product
-		
-		http.securityContext(securityContext->securityContext.requireExplicitSave(true));
-		
+		  .anyRequest().permitAll();		
 		return http.build();
 		}
+	
 
 }
