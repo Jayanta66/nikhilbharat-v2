@@ -157,6 +157,11 @@ public class AppController {
 		userRepository.save(user);
 		return "login";
 		}
+	
+	@GetMapping("https://nikhilbharat-v2-production.up.railway.app/")
+	public String startt() {
+		return "https://nikhilbharat-v2-production.up.railway.app";
+		}
 
 
 }
