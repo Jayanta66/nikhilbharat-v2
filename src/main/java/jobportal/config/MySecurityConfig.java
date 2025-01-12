@@ -64,11 +64,12 @@ public class MySecurityConfig {
 	                "/save",
 	                "/search",
 	                "/new",
-	                "/joblist")
+	                "/joblist",
+	                "https://nikhilbharat-v2-production.up.railway.app/")
 			.permitAll()
-			.requestMatchers(HttpMethod.GET,"/")
+			.requestMatchers(HttpMethod.GET,"/","https://nikhilbharat-v2-production.up.railway.app/")
 			.hasAnyRole("user","admin")
-			.requestMatchers(HttpMethod.POST,"/login","/registration","/index","/registration","/new_product","/save")
+			.requestMatchers(HttpMethod.POST,"/login","/registration","/index","/registration","/new_product","/save","https://nikhilbharat-v2-production.up.railway.app/")
 			.hasAnyRole("user","admin")	
 			.and().logout().logoutSuccessUrl("/")
 			
