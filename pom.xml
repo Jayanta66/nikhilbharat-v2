@@ -5,16 +5,16 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version>
+		<version>3.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>jobportalforhr</artifactId>
+	<artifactId>nikhilbharat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jobportalforhr</name>
-	<description>Job portal for hr</description>
+	<name>nikhilbharat</name>
+	<description>nikhilbharat</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>23</java.version>
 	</properties>
 	<dependencies>
 
@@ -34,7 +34,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>	
-	
+			<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+
 			<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
