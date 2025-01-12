@@ -10,5 +10,5 @@ public class JobPortalApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(JobPortalApplication.class, args);
 	}
- 
+ //chmod +x ./mvnw && ./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install
 }
